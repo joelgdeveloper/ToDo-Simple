@@ -12,35 +12,50 @@
   align-items: center;
 }
 
+.form>span {
+  font-weight: bold;
+  margin-top: 30px;
+}
+
 .validacion {
   text-align: center;
 }
 
 .container-search {
-  margin: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
-.container-search > input {
+.container-search>input {
   margin-right: 10px;
   padding: 3px;
-  margin-bottom: 20px;
 }
 
-.container-tarea {
+.container-content {
   display: flex;
-  width: 200px;
+  width: 400px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.botones span{
+.botones span {
   padding: 6px;
   border-radius: 5px;
   margin-left: 10px;
   cursor: pointer;
   transition: all ease .2s;
 }
+
+.editForm {
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.editForm>button {
+  margin-left: 5px;
+}
+
 
 .botones :nth-child(1) {
 
@@ -59,4 +74,14 @@
 
 .botones :nth-child(2):hover {
   background-color: rgb(204, 46, 46);
+}
+
+.validacion {
+  color: rgb(160, 50, 50);
+}
+
+.editForm {
+  display: block;
+  width: 100%;
+
 }

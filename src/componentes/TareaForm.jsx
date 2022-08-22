@@ -1,8 +1,8 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import '../styles/app.css';
 
-const TareaForm = ({nuevaTarea}) => {
-  const [inputText,setInputText] = useState("");
+const TareaForm = ({ nuevaTarea }) => {
+  const [inputText, setInputText] = useState("");
   const [validation, setValidation] = useState(true);
 
   const handleForm = (e) => {
@@ -12,11 +12,11 @@ const TareaForm = ({nuevaTarea}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(inputText.trim() !== "") {
+    if (inputText.trim() !== "") {
       nuevaTarea(inputText);
       setInputText("");
       setValidation(true);
-    }else {
+    } else {
       setValidation(false);
     }
 
@@ -27,9 +27,9 @@ const TareaForm = ({nuevaTarea}) => {
       <form action="" className='form' onSubmit={handleSubmit}>
         <span>Añadir Tarea</span>
         <div className='container-search'>
-          <input type="text" value={inputText} onChange={handleForm}/>
+          <input type="text" value={inputText} onChange={handleForm} />
           <button>Añadir</button>
-        </div>      
+        </div>
       </form>
       {
         !validation && <div className='validacion'>Añada una tarea por favor</div>
