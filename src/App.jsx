@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Tarea from './componentes/Tarea';
 import TareaForm from './componentes/TareaForm';
+import './styles/app.css';
 
 function App() {
   const [listaTareas, setlistaTareas] = useState([]);

@@ -1,4 +1,5 @@
 import React,{ useState } from 'react'
+import '../styles/app.css';
 
 const TareaForm = ({nuevaTarea}) => {
   const [inputText,setInputText] = useState("");
@@ -22,11 +23,13 @@ const TareaForm = ({nuevaTarea}) => {
   }
 
   return (
-    <div>
+    <div className='container-form'>
       <form action="" className='form' onSubmit={handleSubmit}>
         <span>Añadir Tarea</span>
-        <input type="text" value={inputText} onChange={handleForm}/>
-        <button>Añadir</button>
+        <div className='container-search'>
+          <input type="text" value={inputText} onChange={handleForm}/>
+          <button>Añadir</button>
+        </div>      
       </form>
       {
         !validation && <div className='validacion'>Añada una tarea por favor</div>
